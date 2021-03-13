@@ -13,7 +13,7 @@ echo `hostname`'''
 
         stage('show docker images') {
           steps {
-            sh 'docker images'
+            sh 'sudo docker images'
           }
         }
 
