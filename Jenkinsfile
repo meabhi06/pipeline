@@ -1,11 +1,22 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
-      agent any
-      steps {
-        sh '''
+    stage('first') {
+      parallel {
+        stage('first') {
+          agent any
+          steps {
+            sh '''
 echo `hostname`'''
+          }
+        }
+
+        stage('docker show images') {
+          steps {
+            sh 'docker images'
+          }
+        }
+
       }
     }
 
