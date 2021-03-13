@@ -4,8 +4,8 @@ pipeline {
     stage('error') {
       agent any
       steps {
-        sh '''#!/bin/bash
-hostname'''
+        sh '''
+echo `hostname`'''
       }
     }
 
