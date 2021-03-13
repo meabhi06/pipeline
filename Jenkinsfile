@@ -11,10 +11,9 @@ echo `hostname`'''
           }
         }
 
-        stage('docker show images') {
+        stage('show docker images') {
           steps {
-            sh '''
-sudo docker images'''
+            sh 'docker images'
           }
         }
 
