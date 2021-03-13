@@ -13,7 +13,8 @@ echo `hostname`'''
 
         stage('docker show images') {
           steps {
-            sh 'whoami'
+            sh '''whoami
+docker images'''
           }
         }
 
